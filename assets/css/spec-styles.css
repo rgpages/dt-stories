@@ -1,0 +1,333 @@
+/* 
+ Fonts
+ */
+.spec-miller{
+	font-family: "MillerHeadline Light",Cambria,Georgia,serif;
+}
+
+.spec-miller-bold{
+	font-family: "MillerHeadline Bold",Cambria,Georgia,serif; 
+}
+
+.spec-benton{
+	font-family:"BentonSansCond Regular",Arial,sans-serif;
+}
+.spec-italic{
+	font-style: italic;
+}
+
+.spec-bold{
+	font-weight: 900;
+}
+.heavy{ font-weight: 900; }
+.light{ font-weight: 100; }
+.upper{ text-transform: uppercase; }
+
+/* **************
+**** Headers ****
+************** */
+
+.spec-header{
+	position: relative;
+}
+
+.spec-header-head{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	font-size: 4em;
+	line-height: .9em;
+}
+
+.spec-header-smaller{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	font-size: 3em;
+	line-height: 1em;
+	padding: 10px 0;
+}
+
+.spec-header-top{
+	top: 0;
+}
+
+.spec-header-bottom{
+	bottom: 0;
+}
+
+.spec-bydate{
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 10px 0 10px 0;
+	font-family: Cambria, Georgia, serif;
+	overflow: auto;
+	margin: 10px 0;
+}
+
+.spec-byline{
+	font-weight: 900;
+	font-variant:small-caps;
+}
+
+.spec-date{
+	font-weight: 100;
+	color:#666;
+}
+
+.spec-story p{
+	line-height: 1.7em;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.spec-bar {
+	font-family:"BentonSansCond Regular", Arial, sans-serif;
+	font-size: 1.25em;
+	letter-spacing: .01em;
+	width: 100%;
+	background: #ddd;
+	line-height: 1em;
+	margin: 15px 0 10px 0;
+	overflow: hidden;
+}
+
+.spec-bar-left, .spec-bar-right{
+	width: 100%;
+	padding: 15px;
+}
+
+.spec-bar-left{
+	background: black;
+	color: white;
+}
+
+/* **************
+*** Drop caps ***
+************** */
+
+/* 2-line miller */
+.spec-dropcap2-miller:first-letter{
+	font-family: "MillerHeadline Light",Cambria,Georgia,serif;
+	float: left;
+	font-size: 2.7em;
+	line-height: .8em;
+	margin: 12px 8px 0 0;
+	font-weight: 900;
+}
+/* 2-line benton */
+.spec-dropcap2-benton:first-letter{
+	font-family:"BentonSansCond Regular",Arial,sans-serif;
+	float: left;
+	font-size: 3.5em;
+	line-height: .8em;
+	margin: 10px 5px 0 0;
+	font-weight: 900;
+}
+/* 3-line miller */
+.spec-dropcap3-miller:first-letter{
+	font-family: "MillerHeadline Light",Cambria,Georgia,serif;
+	float: left;
+	font-size: 6.5em;
+	line-height: .8em;
+	margin: 10px 5px 0 0;
+	font-weight: 900;
+}
+/* 3-line benton */
+.spec-dropcap3-benton:first-letter{
+	font-family:"BentonSansCond Regular",Arial,sans-serif;
+	float: left;
+	font-size: 6.5em;
+	line-height: .8em;
+	margin: 10px 5px 0 -8px;
+	font-weight: 900;
+}
+
+/* *************
+*** collapse ***
+************* */
+.collapse{
+  cursor: pointer;
+  display: block;
+}
+.collapse + input{
+  display: none; /* hide the checkboxes */
+}
+.collapse + input + div{
+  display:none;
+}
+.collapse + input:checked + div{
+  display:block;
+}
+
+.plus div.spec-bar div.spec-bar-left::after{
+	float: right;
+	padding: 0 25px 0 0;
+	font-family: FontAwesome;
+	content: '\f067';
+}
+.times div.spec-bar div.spec-bar-left::after{
+	float: right;
+    padding: 0 25px 0 0;
+	font-family: FontAwesome;
+	content: '\f00d';
+}
+
+/* **************
+*** media row ***
+************** */
+
+.spec-media-row{
+	width: 100%;
+	display: block;
+	overflow: hidden;
+}
+
+figcaption.spec-caption{
+	font-style: italic;
+	font-size: .9em;
+	margin-bottom: 1em;
+	line-height: 1.2em;
+}
+
+.spec-att{
+	/* forgive me CSS gods, this is to override some Bulldog jank */
+	text-align: right!important;
+}
+
+.addthis_sharing_toolbox{
+	width: 100%;
+	margin-top: 24px;
+	text-align: center;
+}
+
+@media screen and (min-width: 665px){
+	.spec-header-head{
+		position: absolute;
+		font-size: 5em;
+		line-height: 1.2em;
+		background: rgba(10,10,10,.4);
+		color: white;
+	}
+	
+	.spec-header-smaller{
+		position: absolute;
+		font-size: 3.5em;
+		line-height: .9em;
+		background: rgba(10,10,10,.4);
+		color: white;
+		padding: 20px 0;
+	}
+	
+	.spec-byline{
+		width: 50%;
+		float: left;
+	}
+	.spec-date{
+		width: 50%;
+		float: left;
+		text-align: right;
+	}
+	.spec-story p{
+		font-size: 18px;
+	}
+	.spec-media-right{
+		max-width: 300px;
+		float: right;
+		margin-left: 20px;
+	}
+	
+	/* **************
+	*** media row ***
+	************** */
+	
+	.spec-media-float{
+		float: left;
+	}
+
+	.spec-media-3{
+		width: 30%;
+		margin: 0 1.66667%;
+	}
+	
+	.spec-media-2-3{
+		width: 61.66666%;
+		margin: 0 1.66667%;
+	}
+	
+	.spec-media-2{
+		width: 45%;
+		margin: 0 2.5%;
+	}
+	
+	.spec-bar-left, .spec-bar-right{
+		width: auto;
+		float: left;
+	}
+	
+	.plus div.spec-bar div.spec-bar-left::after{
+		display: none;
+	}
+	.times div.spec-bar div.spec-bar-left::after{
+		display: none;
+	}
+	.plus div.spec-bar::after{
+		float: right;
+		padding: 15px;
+		font-family: FontAwesome;
+		content: '\f067';
+	}
+	.times div.spec-bar::after{
+		float: right;
+		padding: 15px;
+		font-family: FontAwesome;
+		content: '\f00d';
+	}
+	
+}
+
+@media screen and (min-width: 980px){
+	.spec-story{
+		width: 80%;
+		margin: 0 auto;
+	}
+	.spec-header-head{
+		font-size: 6em;
+		line-height: 1.5em;
+	}
+	.spec-header-smaller{
+		font-size: 4.5em;
+		line-height: 1em;
+	}
+	.spec-story p{
+		font-size: 20px;
+		line-height: 1.5em;
+	}
+	.spec-media-right{
+		max-width: 400px;
+	}
+	
+	.addthis_sharing_toolbox{
+		width: 20%;
+		float: right;
+		text-align: right;
+	}
+}
+
+@media screen and (min-width: 1345px){
+	.spec-story{
+		width: 60%;
+	}
+	.spec-header-head{
+		font-size: 8em;
+	}
+	.spec-header-smaller{
+		font-size: 7em;
+	}
+	.spec-story p{
+		font-size: 22px;
+	}
+	.spec-media-right{
+		max-width: 600px;
+	}
+}

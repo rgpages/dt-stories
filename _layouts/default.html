@@ -1,0 +1,75 @@
+<!doctype html>
+<!--[if IE 6]>         <html class="no-js ie6 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7 lt-ie9 lt-ie8">        <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8 lt-ie9">               <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js no-touch">                 <!--<![endif]-->
+	<head>
+		{% include head.html %}
+	</head>
+	<body>
+		<div class="wiffle">
+			<header>
+				{% include header.html %}
+			</header>
+			<div id="bd_content">
+				<section>
+					<article>
+						{% if page.byline1 %}
+							<div class="w_row">
+								<div class="w_col w_C130 Aoff Boff">&nbsp;</div>
+								<div class="w_col w_C640 w_D980">
+									<div class="wrap give">
+										<hgroup>
+											<h3 class="label">{{ page.label | default: 'Local News' }}</h3>
+											<h1>{{ page.headline }}</h1>
+											{% if page.deck %}<h2 style="margin-bottom:0" class="sh4">{{ page.deck }}</h2>{% endif %}
+										</hgroup>
+									</div>
+								</div><!-- /.w_col -->
+							</div><!-- /.w_row -->
+							<hr />
+							<div class="w_row">
+								<div class="w_col w_C130 Aoff Boff">&nbsp;</div>
+								<div class="w_col w_C640 w_D980">
+									<div class="fix">
+										<div id="meta">
+											<p class="byline name byline1">{{ page.byline1 }}</p>
+											<p class="byline organization byline2">{{ page.byline2 }}</p>
+											<p class="pub"><time>{{ page.pubdate }}</time></p>
+										</div> <!-- /#meta -->
+									</div> <!-- /.fix -->
+								</div> <!-- /.w_col -->
+								<div class="w_col w_C130 Aoff Boff">&nbsp;</div>
+							</div> <!-- /.w_row -->
+							<hr>
+							<div class="w_row">
+								<div class="w_col w_C130 Aoff Boff">&nbsp;</div>
+								<div class="w_col w_C640 w_D980">
+									<div id="story">
+										{{ page.content }}
+									</div><!-- /#story -->
+								</div> <!-- /.w_col -->
+								<div class="w_col w_C130 Aoff Boff">&nbsp;</div>
+							</div> <!-- /.w_row -->
+						{% else %}
+							<div class="w_row">
+								<div class="give">
+									<div class="w_col">
+										{{ page.content }}
+									</div><!-- /.w_col -->
+								</div><!-- /.give -->
+							</div><!-- /.w_row -->
+						{% endif %}
+					</article>
+				</section>
+			</div><!-- /#bd_content -->
+			<footer>
+				{% include footer.html %}
+			</footer>
+		</div><!-- /.wiffle -->
+		<script>if(!window.jQuery){document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>');}</script>
+		<script>if(!window.jQuery){document.write('<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.2.min.js"><\/script>');}</script>
+		<script src='{{ "/assets/js/bulldog.min.js" | prepend: site.baseurl }}'></script>
+		<!-- <script src="http://static.registerguard.com/v5/bulldog/dist/1.0.0/20171208/1/js/bulldog.min.js"></script> -->
+	</body>
+</html>

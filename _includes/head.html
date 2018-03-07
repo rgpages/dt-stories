@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+
+<!-- This doesn't need to be public by default, maybe later -RD -->
+<meta name="robots" content="noindex">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta http-equiv="cleartype" content="on">
+
+<meta name="verify-v1" content="FPxMUeDPHJaIRBh+RAEc0QZisGX9WHLZuqlbleiLe3c=">
+<meta name="google-site-verification" content="-b9kSGtOMT3DZyn5y1faDWWBN74GtyBDZlCDJuf39Yc">
+<meta name="msvalidate.01" content="608AEB9B4D0BDA128921F2615DCC1FCE">
+<meta name="sniply-options" content="block" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src='{{ "/assets/js/preflight.min.js" | prepend: site.baseurl }}'></script>
+<!-- <script src="http://static.registerguard.com#(config("build"))#/js/preflight.min.js"></script> -->
+<script src="https://pym.nprapps.org/pym.v1.min.js"></script>
+
+<link rel="stylesheet" href='{{ "/assets/css/bulldog.min.css" | prepend: site.baseurl }}'>
+<!-- <link rel="stylesheet" href="http://static.registerguard.com#(config("build"))#/css/bulldog.min.css"> -->
+
+<link rel="stylesheet" href='{{ "/assets/css/indesign-styles.css" | prepend: site.baseurl }}'>
+<!-- <link rel="stylesheet" href="http://static.registerguard.com/v5/indesign/styles.css"> -->
+
+<link rel="image_src" href='{{ "/assets/media/fb2_app-icon_300x300.png" | prepend: site.baseurl }}'>
+<!-- <link rel="image_src" href="http://uploads.registerguard.com/branding/fb2_app-icon_300x300.png"> -->
+<meta property="og:image" content='{{ "/assets/media/fb2_app-icon_300x300.png" | prepend: site.baseurl }}'>
+<!-- <meta property="og:image" content="http://uploads.registerguard.com/branding/fb2_app-icon_300x300.png"> -->
+
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

@@ -1,0 +1,23 @@
+---
+layout: none
+---
+<html>
+    <head>
+        <title>Special story pages</title>
+        <style>
+            #wrap{
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body id="wrap">
+        <h1>Special story pages moved from DT into Github</h1>
+        <p>Questions? Contact Rob Denton.</p>
+        <ul>
+            {% for post in site.posts %}
+                <li><a href="{{ post.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">{{ post.headline }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
