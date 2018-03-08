@@ -28,7 +28,7 @@
 <meta property="og:image" content='{{ "/assets/media/fb2_app-icon_300x300.png" | prepend: site.baseurl }}'>
 <!-- <meta property="og:image" content="http://uploads.registerguard.com/branding/fb2_app-icon_300x300.png"> -->
 
-<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<title>{% if page.headline %}{{ page.headline }}{% else %}{{ site.title }}{% endif %}</title>
 
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
